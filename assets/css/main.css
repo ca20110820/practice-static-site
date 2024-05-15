@@ -1,0 +1,23 @@
+/* Style for the navigation unordered list */
+.nav-bar {
+    list-style-type: none; /* Remove the default bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the list items */
+.nav-bar li {
+    display: inline; /* Display the list items inline */
+    margin-right: 10px; /* Add spacing between list items */
+}
+
+/* Style for the links */
+.nav-bar li a {
+    text-decoration: none; /* Remove underline from links */
+    color: whitesmoke; /* Change link color */
+}
+
+/* Style for the links on hover */
+.nav-bar li a:hover {
+    color: mediumpurple; /* Change link color on hover */
+}

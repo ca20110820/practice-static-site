@@ -1,0 +1,81 @@
+<!--References:
+https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots
+https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElements
+-->
+<template id="template-base">
+
+    <style>
+        @import url('/assets/css/reset.css');
+        @import url('/assets/css/main.css');
+
+        #base-header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #base-header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Styling the slot element with a specific name */
+        slot[name="main-content"] {
+            font-weight: bold;
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 100%; /* Ensures full height */
+            padding: 20px;
+        }
+
+        img {
+            width: 90px;
+            height: auto;
+            margin-top: 5px;
+        }
+    </style>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.3/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <header id="base-header">
+        <img src="practice-static-site/assets/img/placeholder-image.jpg" alt="Logo">
+        <h1 style="margin-top: 5px; margin-bottom: 5px">
+            Site Name
+        </h1>
+
+        <!-- <slot name="nav-content"></slot> -->
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="practice-static-site">Home</a></li>
+                <li><a href="practice-static-site/about.html">About</a></li>
+                <li><a href="practice-static-site/mini-apps.html">Apps</a></li>
+                <li><a href="practice-static-site/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <slot name="main-content"></slot>
+
+    <footer>
+        <h3><p>&copy; <span id="year"></span> Cedric Anover. All rights reserved.</p></h3>
+        <slot name="footer-nav-content"></slot>
+    </footer>
+
+</template>

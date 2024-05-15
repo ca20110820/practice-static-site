@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Link your CSS files here -->
+    <link rel="stylesheet" href="practice-static-site/assets/css/reset.css">
+    <link rel="stylesheet" href="practice-static-site/assets/css/main.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.3/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<my-base style="text-align: center">
+    <!--Main Content-->
+    <main slot="main-content">
+        <section class="bg-gradient-to-r from-purple-400 to-blue-500 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-white mb-4">Welcome to Our About Section</h2>
+                <a href="#"
+                   class="inline-block bg-white text-indigo-500 rounded-full py-2 px-6 font-bold uppercase tracking-wide hover:bg-indigo-600 hover:text-white transition duration-300">
+                   Learn More
+                </a>
+            </div>
+        </section>
+
+        <div class="lg:content-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            consequat quam eget ligula elementum, eu ultrices sapien dictum.
+        </div>
+
+    </main>
+</my-base>
+
+<script src="practice-static-site/templates/base.js"></script>
+</body>
+</html>
