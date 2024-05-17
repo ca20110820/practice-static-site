@@ -49,6 +49,34 @@ https://developer.mozilla.org/en-US/docs/Web/API/HTMLElements
             height: auto;
             margin-top: 5px;
         }
+
+        .nav-bar {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-bar li {
+            margin-right: 20px; /* Add some spacing between items */
+        }
+
+        .nav-bar li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #333; /* Set link color */
+            font-weight: bold; /* Set link font weight */
+            padding: 10px; /* Add padding to links */
+            transition: color 0.3s; /* Add transition effect for color change */
+        }
+
+        .nav-bar a:hover {
+            color: #666; /* Change link color on hover */
+        }
     </style>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.3/tailwind.min.css" rel="stylesheet">
