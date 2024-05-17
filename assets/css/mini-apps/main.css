@@ -7,6 +7,8 @@ main div {
 /* Hide all tab content by default */
 .tabcontent {
     display: none;
+    height: auto;
+    overflow-y: auto;
   }
   
   /* Style the tab buttons */

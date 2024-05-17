@@ -9,7 +9,7 @@ customElements.define(
 
             // IMPORTANT: Use relative path from project root!!!
             // This is assuming it's uploaded in the server.
-            fetch('/practice-static-site/templates/base.html')
+            fetch('./templates/base.html')
                 .then(async response => {
                     if (!response.ok) {
                         throw new Error('Failed to fetch');
